@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precision Marketing & Sales Systems | Skool Community for Founders</title>
+<title>Precision Marketing & Sales Systems | Skool Community & IRL Meetups</title>
 
-<meta name="description" content="Join a structured Skool community focused on precision marketing, scalable acquisition systems, and disciplined digital business growth.">
+<meta name="description" content="Precision marketing systems, Skool community growth, and Skool IRL Meetups in Chattanooga for digital founders and builders.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -16,6 +16,7 @@ body{
     background:#000;
     color:#fff;
     line-height:1.7;
+    scroll-behavior:smooth;
 }
 
 .container{
@@ -55,6 +56,10 @@ nav{
     border-bottom:1px solid #222;
     padding:20px 0;
     text-align:center;
+    position:sticky;
+    top:0;
+    background:#000;
+    z-index:1000;
 }
 
 nav a{
@@ -83,6 +88,13 @@ nav a:hover{
     color:#000;
 }
 
+.highlight, .card{
+    background:#111;
+    padding:40px;
+    border:1px solid #222;
+    margin-top:30px;
+}
+
 .mayor-img{
     width:220px;
     height:220px;
@@ -101,11 +113,16 @@ nav a:hover{
     opacity:.95;
 }
 
-.highlight{
-    background:#111;
-    padding:40px;
-    border:1px solid #222;
+.hero{
     text-align:center;
+}
+
+.hero-img{
+    width:100%;
+    max-width:800px;
+    margin:40px auto;
+    display:block;
+    border-radius:12px;
 }
 
 footer{
@@ -113,22 +130,68 @@ footer{
     padding:40px 20px;
     color:#666;
 }
+
+/* Calendar */
+.calendar {
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.month {
+  background:#000;
+  padding:15px;
+  border:1px solid #222;
+  border-radius:8px;
+  min-width:200px;
+}
+
+.month h3 {
+  margin-top:0;
+  text-align:center;
+  font-size:1.1em;
+}
+
+.weekdays, .days {
+  display:grid;
+  grid-template-columns:repeat(7, 1fr);
+  text-align:center;
+  margin-top:10px;
+}
+
+.weekdays span {
+  font-weight:600;
+  color:#999;
+}
+
+.days span {
+  padding:10px 0;
+  border-radius:4px;
+  color:#ccc;
+}
+
+.days span.highlight {
+  background:#ff0044;
+  color:#fff;
+  font-weight:700;
+}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="container">
-    <a href="index.html">Home</a>
-    <a href="skool.html">Skool</a>
-    <a href="ecommerce.html">E-Commerce</a>
-    <a href="methodology.html">Methodology</a>
-    <a href="work-with-us.html">Work With Us</a>
+    <a href="#home">Home</a>
+    <a href="#community">Community</a>
+    <a href="#mayor">Mayorship</a>
+    <a href="#meetups">IRL Meetups</a>
+    <a href="#calendar">Calendar</a>
   </div>
 </nav>
 
-<section>
-<div class="container" style="text-align:center;">
+<!-- HERO -->
+<section id="home" class="hero">
+<div class="container">
 
 <img src="skool-logo.png" alt="Skool Logo" style="height:50px;margin-bottom:30px;opacity:.95;">
 
@@ -139,17 +202,14 @@ A high-level Skool community built for founders and operators who want structure
 </p>
 
 <a href="https://www.skool.com/the-dev-hub-5080/about" target="_blank" class="btn">
-Join The Community → Build With Precision Have Fun Doing It!
+Join The Community → Build With Precision
 </a>
-
-<p style="margin-top:15px;font-size:14px;color:#777;">
- all builders Welcome! Nonstop hype! so much noise!
-</p>
 
 </div>
 </section>
 
-<section>
+<!-- WHO IT'S FOR -->
+<section id="community">
 <div class="container">
 <h2>Who It's For</h2>
 <ul>
@@ -157,68 +217,110 @@ Join The Community → Build With Precision Have Fun Doing It!
 <li>Digital founders scaling monetized ecosystems</li>
 <li>Operators who value systems over hype</li>
 </ul>
-</div>
-</section>
 
-<section>
-<div class="container">
-<h2>What You'll Gain</h2>
+<h2 style="margin-top:60px;">What You'll Gain</h2>
 <ul>
 <li>Community acquisition frameworks</li>
 <li>Retention & engagement systems</li>
 <li>Offer positioning clarity</li>
 <li>Structured growth accountability</li>
 </ul>
+
+<div class="highlight">
+<img src="goosify-logo.png" alt="Goosify Logo" class="logo-img">
+<p>
+Goosify is a Skool-based community focused on strategic growth, collaboration, and execution-driven development.
+</p>
+</div>
+
 </div>
 </section>
 
-<section>
+<!-- MAYORSHIP -->
+<section id="mayor">
 <div class="container">
 <h2>Skool Mayorship — Chattanooga</h2>
 
 <div class="highlight">
-
-<img src="Mayor.png" alt="Skool Mayor of Chattanooga" class="mayor-img">
-
-<p>
-As Skool Mayor of Chattanooga, I lead local meetups, foster strategic connections, and represent the Skool ecosystem within the IRL World Tour initiative.
-</p>
+<img src="Mayor.png" alt="Skool Mayor Chattanooga" class="mayor-img">
 
 <p>
-This role bridges digital systems with real-world execution — bringing founders together to collaborate, build high-trust relationships, and strengthen long-term positioning within the ecosystem.
+As Skool Mayor of Chattanooga, I lead local meetups, foster strategic connections, and bridge digital systems with real-world execution.
 </p>
 
 <p>
 Online infrastructure. Offline leadership. Integrated growth.
 </p>
+</div>
 
 </div>
+</section>
+
+<!-- IRL MEETUPS -->
+<section id="meetups" class="hero">
+<div class="container">
+
+<h1>Skool IRL Meetups</h1>
+
+<img src="Skool-logo-chatt.png" alt="Skool IRL Chattanooga" class="hero-img">
+
+<p>
+A relaxed meetup for Skool members, founders, and digital builders in Chattanooga to connect in real life.
+</p>
+
+<a href="https://www.skool.com/the-dev-hub-5080/about" target="_blank" class="btn">
+Join the Skool Community
+</a>
 
 </div>
 </section>
 
 <section>
 <div class="container">
-<h2>The Goosify Community on Skool</h2>
 
-<div class="highlight">
+<h2>What to Expect</h2>
 
-<img src="goosify-logo.png" alt="Goosify Logo" class="logo-img">
+<div class="card">
+<ul>
+<li>Casual conversations about what you're building</li>
+<li>Sharing wins and challenges</li>
+<li>Meeting other local digital creators</li>
+<li>Real friendships — not just LinkedIn connections</li>
+</ul>
+</div>
 
-<p>
-Goosify is a dedicated Skool-based community focused on strategic growth, collaboration, and execution-driven development within the digital ecosystem.
+</div>
+</section>
+
+<!-- CALENDAR -->
+<section id="calendar">
+<div class="container">
+
+<h2>Recurring Meetups — 3rd Saturday Monthly</h2>
+
+<div class="card">
+<div class="calendar">
+
+<div class="month">
+<h3>Feb 2026</h3>
+<div class="days"><span class="highlight">21</span></div>
+</div>
+
+<div class="month">
+<h3>Mar 2026</h3>
+<div class="days"><span class="highlight">21</span></div>
+</div>
+
+<div class="month">
+<h3>Apr 2026</h3>
+<div class="days"><span class="highlight">18</span></div>
+</div>
+
+</div>
+
+<p style="margin-top:40px;">
+📅 Next meetup: <strong>February 21st — Chattanooga</strong>
 </p>
-
-<p>
-Built for founders who value systems, leverage, and structured accountability, the Goosify community operates as a focused environment for serious operators that enjoy fun!
-</p>
-
-<p>
-Goose Dunlavey is a strong entrepreneur known for is unconventional way of business, life is too short so if you're running a business more fun less work!
-</p>
-
-
-
 
 </div>
 
@@ -229,3 +331,4 @@ Goose Dunlavey is a strong entrepreneur known for is unconventional way of busin
 
 </body>
 </html>
+
